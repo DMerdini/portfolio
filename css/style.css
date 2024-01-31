@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+
 * {
   box-sizing: border-box;
   font-family: "Sora", sans-serif;
 }
+
 body {
   margin: auto;
 }
@@ -11,6 +13,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 nav {
   background-color: #000000;
   position: fixed;
@@ -18,6 +21,7 @@ nav {
   z-index: 5;
   width: 100%;
 }
+
 .navul {
   padding-inline-start: 0px;
   margin: 150px auto 0;
@@ -27,11 +31,13 @@ nav {
   text-align: center;
   display: table;
 }
+
 .navli {
   padding: 12px 0;
   display: table-cell;
 }
-.navli > a {
+
+.navli>a {
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
@@ -41,10 +47,12 @@ nav {
   padding: 15px 20px;
   position: relative;
 }
+
 .active {
   background-color: #333333;
 }
-.navli > a:after {
+
+.navli>a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -57,37 +65,46 @@ nav {
 
   width: 0;
 }
-.navli > a:not(:hover):after {
+
+.navli>a:not(:hover):after {
   transition-delay: 500ms;
 }
-.navli > a:hover:after {
+
+.navli>a:hover:after {
   width: 100%;
   left: 0;
 }
-.navli > a:visited {
+
+.navli>a:visited {
   color: white;
 }
+
 .headcontainer {
   width: 90%;
   margin: auto;
 }
+
 header {
   width: 100%;
   position: relative;
 }
+
 .container {
   width: 85%;
   margin: auto;
 }
+
 #outerheader {
   scroll-margin-top: 0;
 }
+
 .outerheader {
-  height: calc(90vh + 75px);
+  height: calc(100vh);
   background-color: black;
   overflow: hidden;
   padding-top: 75px;
 }
+
 .innerheader {
   margin: 5vh 0;
   background: #2837371a;
@@ -100,17 +117,21 @@ header {
   height: 75vh;
   animation: slidelefteonload 0.5s ease-in-out;
 }
+
 @keyframes slidelefteonload {
   from {
     translate: -200px 0px;
   }
+
   to {
     translate: 0px 0px;
   }
 }
+
 .background-elements {
   position: absolute;
 }
+
 .ball1 {
   position: absolute;
   border-radius: 50%;
@@ -118,11 +139,9 @@ header {
   height: 120px;
   background: rgb(9, 9, 121);
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(
-    335deg,
-    rgba(9, 9, 121, 1) 21%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: linear-gradient(335deg,
+      rgba(9, 9, 121, 1) 21%,
+      rgba(0, 212, 255, 1) 100%);
   animation: ball1movement 120s infinite linear;
 }
 
@@ -133,11 +152,9 @@ header {
   width: 150px;
   height: 150px;
   background: rgb(34, 193, 195);
-  background: linear-gradient(
-    33deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(253, 187, 45, 1) 100%
-  );
+  background: linear-gradient(33deg,
+      rgba(34, 193, 195, 1) 0%,
+      rgba(253, 187, 45, 1) 100%);
 
   animation: ball2movement 120s infinite linear;
 }
@@ -149,12 +166,10 @@ header {
   width: 200px;
   height: 200px;
   background-color: #4158d0;
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
-  );
+  background-image: linear-gradient(43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%);
 
   animation: ball3movement 120s infinite;
 }
@@ -166,12 +181,10 @@ header {
   width: 135px;
   height: 135px;
   background-color: #4158d0;
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
-  );
+  background-image: linear-gradient(43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%);
 
   animation: ball4movement 120s infinite;
 }
@@ -199,32 +212,39 @@ header {
 
   animation: ball6movement 120s infinite;
 }
+
 @keyframes ball6movement {
+
   0%,
   100% {
     left: -75px;
     top: 0px;
   }
+
   20% {
     left: -50px;
     top: 600px;
   }
+
   60% {
     left: 1200px;
     top: 550px;
   }
+
   80% {
     top: -75px;
     left: 1300px;
   }
 }
+
 .hero {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.hero > h1 {
+
+.hero>h1 {
   color: #ffffff88;
   /* -webkit-text-stroke: 1px black; */
   text-shadow: 5px 5px 10px rgba(44, 44, 44, 0.6);
@@ -235,59 +255,73 @@ header {
   text-align: center;
   /* user-select: none; */
 }
-.hero > h1 * {
-}
+
+.hero>h1 * {}
+
 @keyframes ball1movement {
+
   0%,
   100% {
     top: 300px;
     left: 150px;
     rotate: 45deg;
   }
+
   50% {
     top: 100px;
     left: 1600px;
     rotate: -45deg;
   }
 }
+
 @keyframes ball2movement {
+
   0%,
   100% {
     top: 700px;
     left: 600px;
   }
+
   70% {
     top: 200px;
     left: 400px;
     rotate: 180deg;
   }
+
   35% {
     left: 1100px;
     top: 200px;
   }
 }
+
 @keyframes ball3movement {
+
   0%,
   100% {
     left: 850px;
     top: -200px;
   }
+
   40% {
     left: 450px;
     top: 800px;
   }
+
   70% {
     left: 1200px;
     top: 500px;
   }
 }
+
 @keyframes ball4movement {
+
   0%,
   100% {
     top: 20px;
     left: 1500px;
     rotate: 180deg;
   }
+
   50% {
     top: 10px;
     left: 400px;
@@ -296,15 +330,18 @@ header {
 }
 
 @keyframes ball5movement {
+
   0%,
   100% {
     left: 1400px;
     top: 0px;
   }
+
   40% {
     left: 400px;
     top: -100px;
   }
+
   70% {
     left: 400px;
     top: 500px;
@@ -315,22 +352,27 @@ header {
 /* *************************** FILLON  PORTFOLIO  ******************************* */
 .portheading {
   padding: 0px 0 0px 0;
+  margin: 0 0 25px 0;
 }
-.portheading > h2 {
+
+.portheading>h2 {
   text-align: center;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
+
 .portfolio {
-  height: calc(100vh - 74px);
+  height: calc(100v);
   display: flex;
   scroll-margin-top: 75px;
   padding: 50px 0 200px 0;
 }
+
 .innerportf {
   display: flex;
   align-items: center;
 }
+
 #portf_preview {
   margin: 0;
   animation: slidelefteonload 0.5s ease-in-out;
@@ -342,25 +384,32 @@ header {
   margin: auto;
   transition: all 200ms;
 }
+
 #portf_preview:hover {
   box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.41);
 }
-#portf_preview > img {
+
+#portf_preview>img {
   width: 100%;
   position: relative;
   animation: slidedown 80s linear infinite;
 }
+
 @keyframes slidedown {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   25% {
     transform: translateY(-25%);
   }
+
   50% {
     transform: translateY(-50%);
   }
+
   75% {
     transform: translateY(-75%);
   }
@@ -370,37 +419,42 @@ header {
   animation: sliderightonload 0.5s ease-in-out;
   margin: 0;
   position: relative;
-  height: 60vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
-  width: 24%;
+  width: 20%;
   position: relative;
 }
+
 @keyframes sliderightonload {
   from {
     translate: 100px 0px;
   }
+
   to {
     translate: 0px 0px;
   }
 }
+
 .profcard {
   transform: skew(-5deg, 0deg);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.21);
   border-radius: 14px;
-  height: 100px;
+  height: 120px;
   background-color: white;
   position: absolute;
 
   transition: all 250ms;
 }
+
 .portfoliopages {
   overflow: hidden;
-  height: 100px;
+  height: 120px;
   border-radius: 8px;
   position: relative;
   transition: all 250ms;
 }
+
 .profcard:hover {
   translate: -10px -10px;
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.51);
@@ -408,10 +462,12 @@ header {
   z-index: 2;
   filter: blur(0px);
 }
+
 .profcard:hover .thumbtitle {
   transform: rotatex(360deg);
   opacity: 1;
 }
+
 .profcard:hover .portselect {
   transition-delay: 200ms;
   top: -40%;
@@ -419,16 +475,20 @@ header {
   filter: blur(0px);
   z-index: 0;
 }
+
 .profcard:not(:hover) .portselect {
   transition-delay: 400ms;
 }
+
 .thumbnails:hover .profcard:not(:hover) {
   /* scale: 0.8; */
   /* translate: 30px 0px; */
 }
+
 .thumbnails:hover .profcard:not(:hover) .portfoliopages {
   filter: blur(2px);
 }
+
 .portselect {
   background-color: white;
   padding: 3px 10px;
@@ -454,15 +514,18 @@ header {
   transition: all 300ms;
   transform: rotatex(270deg);
 }
-.thumbtitle > h2 {
+
+.thumbtitle>h2 {
   color: rgb(255, 255, 255);
   text-align: center;
 }
-.portfoliopages > img {
+
+.portfoliopages>img {
   width: 100%;
   transition: all 300ms;
 }
-.thumbnails:hover .profcard:hover .portfoliopages > img {
+
+.thumbnails:hover .profcard:hover .portfoliopages>img {
   scale: 1.1;
   translate: 0 40px;
 }
@@ -475,7 +538,7 @@ header {
 }
 
 .mygame {
-  height: 90vh;
+  height: calc(100vh - 75px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,6 +547,7 @@ header {
   align-items: center;
   background-color: #000;
 }
+
 .loader {
   height: 2px;
   width: 300px;
@@ -491,70 +555,69 @@ header {
   position: relative;
   overflow: hidden;
 }
+
 .loader .black_overlay {
-  background: -o-linear-gradient(
-    3deg,
-    #000 0,
-    rgba(0, 0, 0, 0.14) 30%,
-    rgba(0, 0, 0, 0.14) 70%,
-    #000 100%
-  );
-  background: linear-gradient(
-    87deg,
-    #000 0,
-    rgba(0, 0, 0, 0.14) 30%,
-    rgba(0, 0, 0, 0.14) 70%,
-    #000 100%
-  );
+  background: -o-linear-gradient(3deg,
+      #000 0,
+      rgba(0, 0, 0, 0.14) 30%,
+      rgba(0, 0, 0, 0.14) 70%,
+      #000 100%);
+  background: linear-gradient(87deg,
+      #000 0,
+      rgba(0, 0, 0, 0.14) 30%,
+      rgba(0, 0, 0, 0.14) 70%,
+      #000 100%);
   position: absolute;
   inset: 0px;
 }
+
 .loader .light {
   width: 70px;
   height: 100%;
   position: absolute;
   left: -20%;
   top: 0;
-  background: -o-linear-gradient(
-    3deg,
-    rgba(0, 0, 0, 0) 0,
-    #0cf 40%,
-    #0cf 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  background: linear-gradient(
-    87deg,
-    rgba(0, 0, 0, 0) 0,
-    #0cf 40%,
-    #0cf 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: -o-linear-gradient(3deg,
+      rgba(0, 0, 0, 0) 0,
+      #0cf 40%,
+      #0cf 60%,
+      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(87deg,
+      rgba(0, 0, 0, 0) 0,
+      #0cf 40%,
+      #0cf 60%,
+      rgba(0, 0, 0, 0) 100%);
   -webkit-animation: 2s ease-in-out infinite light;
   animation: 2s ease-in-out infinite light;
 }
+
 @-webkit-keyframes light {
   from {
     left: -30%;
   }
+
   to {
     left: 100%;
   }
 }
+
 @keyframes light {
   from {
     left: -30%;
   }
+
   to {
     left: 100%;
   }
 }
+
 .gameheading {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.gameheading > h2 {
+.gameheading>h2 {
   width: 50%;
   justify-content: center;
   color: rgb(124, 124, 124);
@@ -575,16 +638,15 @@ header {
   overflow: hidden;
   position: relative;
 }
+
 .words::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    var(--bg-color) 10%,
-    transparent 30%,
-    transparent 70%,
-    var(--bg-color) 90%
-  );
+  background: linear-gradient(var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%);
   z-index: 1;
 }
 
@@ -652,9 +714,11 @@ header {
     margin: 0;
     width: 100%;
   }
-  .navli > a {
+
+  .navli>a {
     font-size: 0.4rem;
   }
+
   .ball1 {
     position: absolute;
     border-radius: 50%;
@@ -662,11 +726,9 @@ header {
     height: 50px;
     background: rgb(9, 9, 121);
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(
-      335deg,
-      rgba(9, 9, 121, 1) 21%,
-      rgba(0, 212, 255, 1) 100%
-    );
+    background: linear-gradient(335deg,
+        rgba(9, 9, 121, 1) 21%,
+        rgba(0, 212, 255, 1) 100%);
     animation: ball1movement 120s infinite linear;
   }
 
@@ -677,11 +739,9 @@ header {
     width: 45px;
     height: 45px;
     background: rgb(34, 193, 195);
-    background: linear-gradient(
-      33deg,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(253, 187, 45, 1) 100%
-    );
+    background: linear-gradient(33deg,
+        rgba(34, 193, 195, 1) 0%,
+        rgba(253, 187, 45, 1) 100%);
 
     animation: ball2movement 120s infinite linear;
   }
@@ -693,12 +753,10 @@ header {
     width: 55px;
     height: 55px;
     background-color: #4158d0;
-    background-image: linear-gradient(
-      43deg,
-      #4158d0 0%,
-      #c850c0 46%,
-      #ffcc70 100%
-    );
+    background-image: linear-gradient(43deg,
+        #4158d0 0%,
+        #c850c0 46%,
+        #ffcc70 100%);
 
     animation: ball3movement 120s infinite;
   }
@@ -710,12 +768,10 @@ header {
     width: 70px;
     height: 70px;
     background-color: #4158d0;
-    background-image: linear-gradient(
-      43deg,
-      #4158d0 0%,
-      #c850c0 46%,
-      #ffcc70 100%
-    );
+    background-image: linear-gradient(43deg,
+        #4158d0 0%,
+        #c850c0 46%,
+        #ffcc70 100%);
 
     animation: ball4movement 120s infinite;
   }
@@ -743,32 +799,39 @@ header {
 
     animation: ball6movement 120s infinite;
   }
+
   @keyframes ball6movement {
+
     0%,
     100% {
       left: -5px;
       top: 0px;
     }
+
     20% {
       left: 0px;
       top: 600px;
     }
+
     60% {
       left: 400px;
       top: 550px;
     }
+
     80% {
       top: -5px;
       left: 350px;
     }
   }
+
   .hero {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .hero > h1 {
+
+  .hero>h1 {
     color: #ffffff88;
     /* -webkit-text-stroke: 1px black; */
     text-shadow: 5px 5px 10px rgba(44, 44, 44, 0.6);
@@ -779,59 +842,73 @@ header {
     text-align: center;
     /* user-select: none; */
   }
-  .hero > h1 * {
-  }
+
+  .hero>h1 * {}
+
   @keyframes ball1movement {
+
     0%,
     100% {
       top: 300px;
       left: 50px;
       rotate: 45deg;
     }
+
     50% {
       top: 100px;
       left: 400px;
       rotate: -45deg;
     }
   }
+
   @keyframes ball2movement {
+
     0%,
     100% {
       top: 450px;
       left: 120px;
     }
+
     70% {
       top: 200px;
       left: 200px;
       rotate: 180deg;
     }
+
     35% {
       left: 350px;
       top: 200px;
     }
   }
+
   @keyframes ball3movement {
+
     0%,
     100% {
       left: 300px;
       top: -50px;
     }
+
     40% {
       left: 250px;
       top: 600px;
     }
+
     70% {
       left: 400px;
       top: 500px;
     }
   }
+
   @keyframes ball4movement {
+
     0%,
     100% {
       top: 20px;
       left: 420px;
       rotate: 180deg;
     }
+
     50% {
       top: 10px;
       left: 100px;
@@ -840,41 +917,50 @@ header {
   }
 
   @keyframes ball5movement {
+
     0%,
     100% {
       left: 400px;
       top: 0px;
     }
+
     40% {
       left: 100px;
       top: -10px;
     }
+
     70% {
       left: 120px;
       top: 500px;
     }
   }
-  .hero > h1 {
+
+  .hero>h1 {
     font-size: 3rem;
   }
+
   .innerportf {
     flex-direction: column;
   }
+
   #portf_preview {
     width: 90%;
     height: 60vh;
     margin-bottom: 25px;
   }
+
   .thumbnails {
     width: 100%;
     height: 100px;
     flex-direction: row;
     justify-content: center;
   }
+
   .profcard {
     width: 85px;
     border-radius: 5px;
   }
+
   .profcard:hover .portselect {
     transition-delay: 200ms;
     top: -30%;
@@ -882,27 +968,34 @@ header {
     filter: blur(0px);
     z-index: 0;
   }
+
   .profcard:hover {
     scale: 1.02;
   }
+
   .portfoliopages {
     border-radius: 5px;
   }
+
   .thumbtitle {
     opacity: 0;
     position: absolute;
     bottom: 25%;
     translate: 0 50%;
   }
-  .thumbtitle > h2 {
+
+  .thumbtitle>h2 {
     font-size: 0.8rem;
   }
+
   .portselect {
     font-size: 0.5rem;
   }
-  .thumbnails:hover .profcard:hover .portfoliopages > img {
+
+  .thumbnails:hover .profcard:hover .portfoliopages>img {
     scale: 1.1;
     translate: 0 10px;
   }
 }
+
 /* *************************** MBARON MEDIA SCREEN ******************************* */

@@ -14,7 +14,7 @@ function ifr(arg) {
 let thumbnails = document.getElementById("thumbnails").children;
 let thumbnailsparams = {
   leftparam: 0,
-  topparam: -30,
+  topparam: 0,
   zindexparam: 0,
   translateparam: 0,
 };
@@ -26,7 +26,7 @@ function portfolioparams() {
       thumbnails[i].style.left = thumbnailsparams.leftparam + "px";
       thumbnails[i].style.top = thumbnailsparams.topparam + "px";
       thumbnailsparams.leftparam -= 0;
-      thumbnailsparams.topparam += 80;
+      thumbnailsparams.topparam += 90;
       thumbnailsparams.zindexparam -= 1;
     }
   } else if (screensize > 600) {
@@ -53,3 +53,23 @@ function portfolioparams() {
     }
   }
 }
+
+function updateBoxShadowColor() {
+  const ball6 = document.querySelector(".ball6");
+
+  if (ball6) {
+    const computedStyle = getComputedStyle(ball6);
+    const backgroundColor = computedStyle.backgroundColor;
+
+    // Extract RGB values from the background color
+    const rgbValues = backgroundColor.match(/\d+/g);
+
+    if (rgbValues) {
+      const boxShadowColor = `rgba(${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]}, 0.5)`;
+      ball6.style.boxShadow = `0px 10px 55px 10px ${boxShadowColor}`;
+    }
+  }
+}
+
+// Call the function to update the box shadow color
+updateBoxShadowColor();
