@@ -73,3 +73,64 @@ function updateBoxShadowColor() {
 
 // Call the function to update the box shadow color
 updateBoxShadowColor();
+
+function lerp(start, end, t) {
+  return start * (1 - t) + end * t;
+}
+
+function handleMouseMove(event) {
+  const skillCard = event.currentTarget;
+  const boundingRect = skillCard.getBoundingClientRect();
+
+  const mouseX =
+    (event.clientX - boundingRect.left) / skillCard.clientWidth - 0.5;
+  const mouseY =
+    (event.clientY - boundingRect.top) / skillCard.clientHeight - 0.5;
+
+  targetTranslationX = mouseX * 50; // Increase the multiplier
+  targetTranslationY = mouseY * 50; // Increase the multiplier
+}
+
+function updateParallax() {
+  const skillCard = document.querySelector(".skillcard:hover");
+
+  if (skillCard) {
+    const innerSkillCard = skillCard.querySelector(".innerskillcard");
+
+    translationX = lerp(translationX, targetTranslationX, 0.1);
+    translationY = lerp(translationY, targetTranslationY, 0.1);
+
+    innerSkillCard.style.transition = "transform 0.5s";
+    innerSkillCard.style.transform = `translate(${translationX}px, ${translationY}px)`;
+  }
+
+  requestAnimationFrame(updateParallax);
+}
+
+function resetTranslation(event) {
+  const skillCard = event.currentTarget;
+  const innerSkillCard = skillCard.querySelector(".innerskillcard");
+
+  innerSkillCard.style.transition = "all 0.51s";
+  innerSkillCard.style.transform = "translate(0, 0)";
+
+  targetTranslationX = 0;
+  targetTranslationY = 0;
+}
+
+let targetTranslationX = 0;
+let targetTranslationY = 0;
+let translationX = 0;
+let translationY = 0;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const skillCards = document.querySelectorAll(".skillcard");
+
+  skillCards.forEach((skillCard) => {
+    skillCard.addEventListener("mouseover", resetTranslation);
+    skillCard.addEventListener("mouseout", resetTranslation);
+    skillCard.addEventListener("mousemove", handleMouseMove);
+  });
+
+  updateParallax();
+});

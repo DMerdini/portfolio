@@ -37,7 +37,7 @@ nav {
   display: table-cell;
 }
 
-.navli>a {
+.navli > a {
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
@@ -52,7 +52,7 @@ nav {
   background-color: #333333;
 }
 
-.navli>a:after {
+.navli > a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -66,16 +66,16 @@ nav {
   width: 0;
 }
 
-.navli>a:not(:hover):after {
+.navli > a:not(:hover):after {
   transition-delay: 500ms;
 }
 
-.navli>a:hover:after {
+.navli > a:hover:after {
   width: 100%;
   left: 0;
 }
 
-.navli>a:visited {
+.navli > a:visited {
   color: white;
 }
 
@@ -139,9 +139,11 @@ header {
   height: 120px;
   background: rgb(9, 9, 121);
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(335deg,
-      rgba(9, 9, 121, 1) 21%,
-      rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient(
+    335deg,
+    rgba(9, 9, 121, 1) 21%,
+    rgba(0, 212, 255, 1) 100%
+  );
   animation: ball1movement 120s infinite linear;
 }
 
@@ -152,9 +154,11 @@ header {
   width: 150px;
   height: 150px;
   background: rgb(34, 193, 195);
-  background: linear-gradient(33deg,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(253, 187, 45, 1) 100%);
+  background: linear-gradient(
+    33deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
 
   animation: ball2movement 120s infinite linear;
 }
@@ -166,10 +170,12 @@ header {
   width: 200px;
   height: 200px;
   background-color: #4158d0;
-  background-image: linear-gradient(43deg,
-      #4158d0 0%,
-      #c850c0 46%,
-      #ffcc70 100%);
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
 
   animation: ball3movement 120s infinite;
 }
@@ -181,10 +187,12 @@ header {
   width: 135px;
   height: 135px;
   background-color: #4158d0;
-  background-image: linear-gradient(43deg,
-      #4158d0 0%,
-      #c850c0 46%,
-      #ffcc70 100%);
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
 
   animation: ball4movement 120s infinite;
 }
@@ -214,7 +222,6 @@ header {
 }
 
 @keyframes ball6movement {
-
   0%,
   100% {
     left: -75px;
@@ -244,7 +251,7 @@ header {
   align-items: center;
 }
 
-.hero>h1 {
+.hero > h1 {
   color: #ffffff88;
   /* -webkit-text-stroke: 1px black; */
   text-shadow: 5px 5px 10px rgba(44, 44, 44, 0.6);
@@ -256,10 +263,10 @@ header {
   /* user-select: none; */
 }
 
-.hero>h1 * {}
+.hero > h1 * {
+}
 
 @keyframes ball1movement {
-
   0%,
   100% {
     top: 300px;
@@ -275,7 +282,6 @@ header {
 }
 
 @keyframes ball2movement {
-
   0%,
   100% {
     top: 700px;
@@ -295,7 +301,6 @@ header {
 }
 
 @keyframes ball3movement {
-
   0%,
   100% {
     left: 850px;
@@ -314,7 +319,6 @@ header {
 }
 
 @keyframes ball4movement {
-
   0%,
   100% {
     top: 20px;
@@ -330,7 +334,6 @@ header {
 }
 
 @keyframes ball5movement {
-
   0%,
   100% {
     left: 1400px;
@@ -355,13 +358,14 @@ header {
   margin: 0 0 25px 0;
 }
 
-.portheading>h2 {
+.portheading > h2 {
   text-align: center;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
 
 .portfolio {
+  box-shadow: 10px 10px 15px 10px #ffffff88;
   height: calc(100v);
   display: flex;
   scroll-margin-top: 75px;
@@ -389,14 +393,13 @@ header {
   box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.41);
 }
 
-#portf_preview>img {
+#portf_preview > img {
   width: 100%;
   position: relative;
   animation: slidedown 80s linear infinite;
 }
 
 @keyframes slidedown {
-
   0%,
   100% {
     transform: translateY(0);
@@ -515,17 +518,17 @@ header {
   transform: rotatex(270deg);
 }
 
-.thumbtitle>h2 {
+.thumbtitle > h2 {
   color: rgb(255, 255, 255);
   text-align: center;
 }
 
-.portfoliopages>img {
+.portfoliopages > img {
   width: 100%;
   transition: all 300ms;
 }
 
-.thumbnails:hover .profcard:hover .portfoliopages>img {
+.thumbnails:hover .profcard:hover .portfoliopages > img {
   scale: 1.1;
   translate: 0 40px;
 }
@@ -543,7 +546,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-
+  padding: 5vh 0;
   align-items: center;
   background-color: #000;
 }
@@ -557,16 +560,20 @@ header {
 }
 
 .loader .black_overlay {
-  background: -o-linear-gradient(3deg,
-      #000 0,
-      rgba(0, 0, 0, 0.14) 30%,
-      rgba(0, 0, 0, 0.14) 70%,
-      #000 100%);
-  background: linear-gradient(87deg,
-      #000 0,
-      rgba(0, 0, 0, 0.14) 30%,
-      rgba(0, 0, 0, 0.14) 70%,
-      #000 100%);
+  background: -o-linear-gradient(
+    3deg,
+    #000 0,
+    rgba(0, 0, 0, 0.14) 30%,
+    rgba(0, 0, 0, 0.14) 70%,
+    #000 100%
+  );
+  background: linear-gradient(
+    87deg,
+    #000 0,
+    rgba(0, 0, 0, 0.14) 30%,
+    rgba(0, 0, 0, 0.14) 70%,
+    #000 100%
+  );
   position: absolute;
   inset: 0px;
 }
@@ -577,16 +584,20 @@ header {
   position: absolute;
   left: -20%;
   top: 0;
-  background: -o-linear-gradient(3deg,
-      rgba(0, 0, 0, 0) 0,
-      #0cf 40%,
-      #0cf 60%,
-      rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(87deg,
-      rgba(0, 0, 0, 0) 0,
-      #0cf 40%,
-      #0cf 60%,
-      rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(
+    3deg,
+    rgba(0, 0, 0, 0) 0,
+    #0cf 40%,
+    #0cf 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    87deg,
+    rgba(0, 0, 0, 0) 0,
+    #0cf 40%,
+    #0cf 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
   -webkit-animation: 2s ease-in-out infinite light;
   animation: 2s ease-in-out infinite light;
 }
@@ -617,7 +628,7 @@ header {
   justify-content: center;
 }
 
-.gameheading>h2 {
+.gameheading > h2 {
   width: 50%;
   justify-content: center;
   color: rgb(124, 124, 124);
@@ -626,7 +637,7 @@ header {
   font-size: 25px;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  height: 40px;
+  height: 35px;
   padding: 10px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,10 +654,12 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(var(--bg-color) 10%,
-      transparent 30%,
-      transparent 70%,
-      var(--bg-color) 90%);
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
   z-index: 1;
 }
 
@@ -699,7 +712,109 @@ header {
     transform: translateY(-400%);
   }
 }
+.innerskills {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  width: 90%;
+}
+.skilsrow {
+  /* border: 1px solid #fff; */
+  display: flex;
 
+  justify-content: space-evenly;
+}
+.skilsrow:last-child {
+  justify-content: center;
+}
+.innerskillcard {
+  background: radial-gradient(circle, #956afa33 0%, #956afa03 100%);
+  border: 1px solid #956afa33;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s;
+  height: 250px;
+  width: 250px;
+  transition: all 0.6s;
+}
+.innerskillcard:hover {
+  animation: flickerborder 2s infinite;
+  background: radial-gradient(circle, #956afa33 0%, #956afa00 100%);
+  border: 2px solid #956afa88;
+  scale: 1.1;
+}
+.innerskillcard:hover > .skillcardframe {
+  border: 1px #ffffff88 solid;
+}
+.innerskillcard:hover svg {
+  fill: #bea2ffff;
+}
+@keyframes flickerborder {
+  0% {
+    border: 1px solid #956afa33;
+  }
+  50% {
+    border: 1px solid #956afaaa;
+  }
+  100% {
+    border: 1px solid #956afa33;
+  }
+}
+/*@keyframes flickerborder {
+  0%,
+  100% {
+    background: radial-gradient(circle, #956afa33 0%, #956afa03 100%);
+    border: 1px solid #956afa33;
+  }
+  50% {
+    background: radial-gradient(circle, #956afa22 0%, #956afa03 100%);
+    border: 1px solid #956afaaa;
+  }
+}*/
+.innerskillcard:not(:hover) {
+  background: radial-gradient(circle, #956afa22 0%, #956afa03 100%);
+  border: 2px solid #956afa88;
+  scale: 1;
+}
+.innerskillcard * {
+  pointer-events: none;
+  text-align: center;
+  width: 80%;
+}
+.skillcardtitle {
+  color: #fafafa;
+  text-shadow: 2px 3px 4px #956afa;
+}
+.skilldescr {
+  color: #919191;
+}
+.skillcard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #fff; */
+  width: 34%;
+  height: 250px;
+}
+.skillcardframe {
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: 200ms all;
+  border: #956afa 1px solid;
+}
+.skillcardbody * {
+  margin: auto;
+}
+.skillcardframe > svg {
+  fill: #aaaaaa;
+  width: 100%;
+}
 /* ***************************  MBARON GAME  ******************************* */
 /* *************************** FILLON  CONTACT  ******************************* */
 
@@ -715,7 +830,7 @@ header {
     width: 100%;
   }
 
-  .navli>a {
+  .navli > a {
     font-size: 0.4rem;
   }
 
@@ -726,9 +841,11 @@ header {
     height: 50px;
     background: rgb(9, 9, 121);
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(335deg,
-        rgba(9, 9, 121, 1) 21%,
-        rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(
+      335deg,
+      rgba(9, 9, 121, 1) 21%,
+      rgba(0, 212, 255, 1) 100%
+    );
     animation: ball1movement 120s infinite linear;
   }
 
@@ -739,9 +856,11 @@ header {
     width: 45px;
     height: 45px;
     background: rgb(34, 193, 195);
-    background: linear-gradient(33deg,
-        rgba(34, 193, 195, 1) 0%,
-        rgba(253, 187, 45, 1) 100%);
+    background: linear-gradient(
+      33deg,
+      rgba(34, 193, 195, 1) 0%,
+      rgba(253, 187, 45, 1) 100%
+    );
 
     animation: ball2movement 120s infinite linear;
   }
@@ -753,10 +872,12 @@ header {
     width: 55px;
     height: 55px;
     background-color: #4158d0;
-    background-image: linear-gradient(43deg,
-        #4158d0 0%,
-        #c850c0 46%,
-        #ffcc70 100%);
+    background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    );
 
     animation: ball3movement 120s infinite;
   }
@@ -768,10 +889,12 @@ header {
     width: 70px;
     height: 70px;
     background-color: #4158d0;
-    background-image: linear-gradient(43deg,
-        #4158d0 0%,
-        #c850c0 46%,
-        #ffcc70 100%);
+    background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    );
 
     animation: ball4movement 120s infinite;
   }
@@ -801,7 +924,6 @@ header {
   }
 
   @keyframes ball6movement {
-
     0%,
     100% {
       left: -5px;
@@ -831,7 +953,7 @@ header {
     align-items: center;
   }
 
-  .hero>h1 {
+  .hero > h1 {
     color: #ffffff88;
     /* -webkit-text-stroke: 1px black; */
     text-shadow: 5px 5px 10px rgba(44, 44, 44, 0.6);
@@ -843,10 +965,10 @@ header {
     /* user-select: none; */
   }
 
-  .hero>h1 * {}
+  .hero > h1 * {
+  }
 
   @keyframes ball1movement {
-
     0%,
     100% {
       top: 300px;
@@ -862,7 +984,6 @@ header {
   }
 
   @keyframes ball2movement {
-
     0%,
     100% {
       top: 450px;
@@ -882,7 +1003,6 @@ header {
   }
 
   @keyframes ball3movement {
-
     0%,
     100% {
       left: 300px;
@@ -901,7 +1021,6 @@ header {
   }
 
   @keyframes ball4movement {
-
     0%,
     100% {
       top: 20px;
@@ -917,7 +1036,6 @@ header {
   }
 
   @keyframes ball5movement {
-
     0%,
     100% {
       left: 400px;
@@ -935,7 +1053,7 @@ header {
     }
   }
 
-  .hero>h1 {
+  .hero > h1 {
     font-size: 3rem;
   }
 
@@ -984,7 +1102,7 @@ header {
     translate: 0 50%;
   }
 
-  .thumbtitle>h2 {
+  .thumbtitle > h2 {
     font-size: 0.8rem;
   }
 
@@ -992,10 +1110,27 @@ header {
     font-size: 0.5rem;
   }
 
-  .thumbnails:hover .profcard:hover .portfoliopages>img {
+  .thumbnails:hover .profcard:hover .portfoliopages > img {
     scale: 1.1;
     translate: 0 10px;
   }
+  .mygame {
+  height: fit-content;
+}
+.gameheading > h2 {
+  width: 86%;
+}
+.skilsrow{
+  flex-direction: column;gap: 30px;
+}
+.skillcard{
+  width: 100%;
+  
+}
+.skillcard>*{
+  margin:150px 0;
+}
+.innerskillcard{}
 }
 
 /* *************************** MBARON MEDIA SCREEN ******************************* */

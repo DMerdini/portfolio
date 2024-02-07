@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #parent {
+        z-index: -1;
+        position: absolute;
+        width: 1200px;
+        height: 850px;
+        display: grid;
+        place-items: center;
+        /* background-color: #ccc; */
+        /* overflow: hidden; */
+      }
+
+      #child {
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        background-color: #3498db;
+        transition: all 2s ease-out;
+      }
+      #child > img {
+        width: 100%;
+      }
+      #parent:hover > #child {
+        scale: 1.05;
+      }
+      .main,
+      .main p {
+        pointer-events: none;
+      }
+    </style>
+    <title>Mouse Over Translate</title>
+  </head>
+  <body>
+    <div id="parent" onmousemove="translateChild(event)">
+      <div id="child">
+        <img src="QR code OpenScource Club - Regjistrime.jpg" alt="" />
+      </div>
+    </div>
+
+    <script>
+      function translateChild(event) {
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        const parentRect = parent.getBoundingClientRect();
+        const centerX = parentRect.left + parentRect.width / 2;
+        const centerY = parentRect.top + parentRect.height / 2;
+
+        const deltaX = event.clientX - centerX;
+        const deltaY = event.clientY - centerY;
+
+        const translateX = deltaX;
+        const translateY = deltaY;
+
+        child.style.transform = `translate(${translateX}px, ${translateY}px)`;
+      }
+    </script>
+  </body>
+</html>
